@@ -1,0 +1,44 @@
+plugins {
+	id 'org.springframework.boot' version '2.3.4.RELEASE'
+	id 'io.spring.dependency-management' version '1.0.10.RELEASE'
+	id 'java'
+	id 'war'
+}
+
+group = 'com.aqzjkj'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '15'
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
+	testImplementation('org.springframework.boot:spring-boot-starter-test') {
+		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
+	}
+	//添加lombok依赖
+	providedCompile group: 'org.projectlombok', name: 'lombok', version: '1.18.8'
+
+	compile group: 'com.google.guava', name: 'guava', version: '17.0'
+
+	//导入slf4j依赖包，导入下面的两个包，其中logback-classic会导入slf4j包到项目的ExternalLibraries。 logback-core知识可以百度。
+	compile('ch.qos.logback:logback-core:1.2.3')
+
+	compile('ch.qos.logback:logback-classic:1.2.3')
+
+	//导入slf4j包，不导入这个包会报错：SLF4J: Failed to load class
+	//"org.slf4j.impl.StaticLoggerBinder"
+
+	testCompile group: 'org.slf4j', name: 'slf4j-simple', version: '1.7.25'
+	// https://mvnrepository.com/artifact/com.aliyun/aliyun-java-sdk-core
+	compile group: 'com.aliyun', name: 'aliyun-java-sdk-core', version: '4.5.12'
+
+
+}
+
+test {
+	useJUnitPlatform()
+}
