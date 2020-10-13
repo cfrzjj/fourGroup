@@ -1,0 +1,33 @@
+<view class="page-cells page-cells_after-title">
+
+  <view class="page-cell page-cell_input">
+    <!-- <image class="image" mode="aspectFit" src="{{imageUrl + 'loginLogo.png'}}" /> -->
+    <!-- <image class="image" mode="aspectFit" src="{{url + 'loginLogo.png'}}" /> -->
+    <image class="image" mode="aspectFit" src="../images/login/loginLogo.png" />
+  </view>
+  <!-- <view class="page-cell page-cell_input">
+    <input
+      class="username"
+      placeholder="用户名"
+      focus="{{focus}}"
+    />
+  </view>
+  <view class="page-cell page-cell_input">
+    <input
+      class="password"
+      placeholder="密码"
+      focus="{{focus}}"
+      password="true" 
+    />
+  </view> -->
+  <view class="mini-buttons">
+    <form bindsubmit="submit" bindreset="reset" report-submit="true">
+      <view class="userInfo">
+        <input name="username" class="username" placeholder="用户名" />
+        <input name="password" class="password" placeholder="密码"  password="true" />
+        <button class="login-btn" form-type="submit" type="primary" size="mini">登录</button>
+        <button class="reset-btn" form-type="reset" type="default" size="mini">重置</button>
+      </view>
+    </form>
+  </view>
+</view>

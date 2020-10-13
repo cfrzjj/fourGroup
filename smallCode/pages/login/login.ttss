@@ -1,0 +1,42 @@
+.page-cells.page-cells_after-title{
+  margin-top: 70%;
+  margin-left: 25%;
+
+}
+.username{
+  width: 73%;
+  /* background-color: rgb(222, 135, 135); */
+  /* max-width: 50 px; */
+  border: solid 1px cyan;
+  border-radius: 5px;
+}
+.password{
+  margin-top: 5%;
+  width: 73%;
+  /* background-color: rgb(255, 196, 0); */
+  border: solid 1px cyan;
+  border-radius: 5px;
+}
+.image{
+  margin-left: -18%;
+  margin-top: -150%;
+  transform: scale(0.5);
+}
+.mini-buttons{
+  margin-top: 15%;
+  margin-left: 5%;
+}
+.login-btn{
+  /* margin-left: 15%; */
+  /* left: 20 rpx; */
+  /* background-color: blue; */
+  /* color: white; */
+  margin-top: 10%;
+  margin-left: 3%;
+}
+.reset-btn{
+  margin-left: 15%;
+  /* left: 20 rpx; */
+  background-color: blue;
+  color: white;
+}
